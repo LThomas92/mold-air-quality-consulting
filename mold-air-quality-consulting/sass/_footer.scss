@@ -1,0 +1,130 @@
+.site-footer {
+    @include container-margins;
+    .site-info {
+        display: flex;
+        justify-content: space-between;
+        background-color: $green;
+        width: 100vw;
+        position: relative;
+        left: calc(50% - 50vw);
+        padding: 4.5rem;
+        @media only screen and (max-width: $tablet_max) {
+          flex-direction: column;
+          padding: 2rem;
+      }
+    }
+    &__social-section {
+        flex-basis: calc((100% / 3) - 4rem);
+        @media only screen and (max-width: $tablet_max) {
+          margin-bottom: 3rem;
+      }
+    }
+    &__social-title {
+      color: $white;
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    &__social-address {
+      color: $white;
+      margin-bottom: 1.5rem;
+    }
+    &__social-icons {
+      display: flex;
+      flex-basis: calc((100% / 2) - 1rem);
+    }
+    &__social-icon {
+      margin-right: 1rem;
+      img {
+        height: 2.5rem;
+      }
+    }
+    //CONTACT SECTION 
+    &__contact-section {
+      flex-basis: calc((100% / 3) - 4rem);
+        @media only screen and (max-width: $tablet_max) {
+          margin-bottom: 3rem;
+      }
+    }
+    &__contact-title {
+      color: $white;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 1.4rem;
+      text-transform: uppercase;
+      @media only screen and (max-width: $tablet_max) {
+        font-size: 1.5rem;
+    }
+    }
+    &__contact-phone {
+      color: $white;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      display: block;
+      &::before {
+        content: '';
+        background-image: url('../img/phone.svg');
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1rem;
+      }
+      &:hover {
+        color: $navyBlue;
+      }
+    }
+    &__contact-email {
+      color: $white;
+      transition: all 300ms ease-in;
+      cursor: pointer;
+      &::before {
+        content: '';
+        background-image: url('../img/mail.svg');
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1rem;
+      }
+      &:hover {
+        color: $navyBlue;
+      }
+    }
+    //FOOTER NAVIGATION
+    &__navigation {
+      flex-basis: calc((100% / 3) - 4rem);
+      ul {
+        li a {
+          color: $white;
+          display: block;
+          margin-bottom: 0.5rem;
+          transition: all 300ms ease-in;
+          @media only screen and (max-width: $tablet_max) {
+            font-size: 1.2rem;
+        }
+          &::hover {
+            color: $navyBlue;
+          }
+        }
+      }
+    }
+    &__copyright {
+      background-color: $black;
+      padding: 0.5rem 1.4rem;
+      text-align: center;
+      width: 100vw;
+      position: relative;
+      left: calc(50% - 50vw);
+    }
+    &__copyright-text {
+      color: $white;
+      font-weight: 300;
+      font-size: 0.8rem;
+    }
+}

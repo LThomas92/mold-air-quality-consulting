@@ -1,0 +1,99 @@
+.c-how-it-works {
+    @include container-margins;
+    &__header {
+        text-align: center;
+        margin-top: 3.5rem;
+        margin-bottom: 10rem;
+        @media only screen and (max-width: $tablet_max) {
+            margin-bottom: 7.5rem;
+        }
+    }
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-bottom: 1.4rem;
+        color: $green;
+    }
+    &__description {
+        font-size: 0.9rem;
+        max-width: 600px;
+        margin: 0 auto;
+        color: $navyBlue;
+    }
+    &__list-items {
+        margin-bottom: 3.5rem;
+    }
+    &__list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media only screen and (max-width: $tablet_max) {
+            flex-direction: column;
+            padding: 0 2.5rem;
+        }
+    }
+    &__list-item-content {
+        flex-basis: calc((100% / 2) - 4rem);
+        @media only screen and (max-width: $tablet_max) {
+            width: 100%;
+        }
+    }
+    &__list-item-number {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: rgba($lightBlue, 0.4);
+    }
+    &__list-item-title {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 1.2rem;
+        color: $green;
+    }
+    &__list-item-description {
+        margin-bottom: 10rem;
+        color: $navyBlue;
+        @media only screen and (max-width: $tablet_max) {
+            margin-bottom: 5rem;
+        }
+    }
+    &__list-item-image {
+        flex-basis: calc((100% / 2) - 6rem);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 34px 1px rgba(0, 0, 0, 0.75);
+        margin-bottom: 15rem;
+        @media only screen and (max-width: $tablet_max) {
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+        &::before {
+          content: "";
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 0;
+          padding-bottom: 60%;
+      }
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: 300ms cubic-bezier(0.64, 0.04, 0.35, 1);
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+      }
+    }
+    &__summary {
+        text-align: center;
+        font-family: $roboto;
+        font-size: 1.1rem;
+        margin-bottom: 4rem;
+        color: $navyBlue;
+        @media only screen and (max-width: $tablet_max) {
+            margin-bottom: 2rem;
+            padding: 0 2rem;
+        }
+    }
+}

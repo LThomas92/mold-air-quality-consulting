@@ -1,0 +1,38 @@
+.c-contact {
+    @include container-margins;
+    .gform_title {
+        font-family: $lato;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+        color: $green;
+    }
+    .gfield_label {
+        font-family: $roboto;
+        font-weight: 400;
+    }
+    .gform_button {
+        border: none;
+        outline: none;
+        background-color: $navyBlue;
+        color: $white;
+        font-family: $roboto;
+        padding: 0.8rem 1.5rem;
+        cursor: pointer;
+    }
+    .gform_confirmation_wrapper  {
+        background-color: $navyBlue;
+        margin-top: 2.5rem;
+        .gform_confirmation_message {
+            font-family: $roboto;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            color: $white;
+            padding: 2.5rem 0;
+        }
+    }
+    textarea {
+        font-family: $roboto;
+    }
+}

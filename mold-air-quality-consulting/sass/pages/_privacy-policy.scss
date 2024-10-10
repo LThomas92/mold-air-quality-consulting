@@ -1,0 +1,13 @@
+.c-privacy-policy {
+    @include container-margins;
+    &__title {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    &__main-content {
+        margin: 3.5rem 0;
+        h2 {
+            margin: 1.2rem 0;
+        }
+    }
+}
