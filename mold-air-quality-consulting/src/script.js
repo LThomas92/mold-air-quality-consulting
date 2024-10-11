@@ -9,7 +9,6 @@ let blockTriggerHeight = $(window).height() * 0.33;
 $( document ).ready(function() {
   
   //Mobile Menu 
-
 $('.mobile-header__menu-icon').click(function() {
   $(this).toggleClass('open');
   $('.mobile-menu-overlay').toggleClass('mobile-menu-overlay__active');
@@ -17,6 +16,17 @@ $('.mobile-header__menu-icon').click(function() {
 
 $('.mobile-menu-overlay__close-icon').click(function() {
   $('.mobile-menu-overlay').removeClass('mobile-menu-overlay__active');
+});
+
+$('.c-payment-terms__list-item-title').click(function() {
+  var paymentTitle = $(this).attr('key');
+  $(this).toggleClass('c-payment-terms__list-item-active-title').siblings().removeClass('c-payment-terms__list-item-active-title');
+
+  $('.c-payment-terms__wrapper').each(function() {
+    if($(this).attr('key') == paymentTitle) {
+      $(this).toggleClass('is-open').siblings().removeClass('is-open');
+    }
+  });
 });
 
   
@@ -101,8 +111,6 @@ $('.mobile-menu-overlay__close-icon').click(function() {
         $(this).toggleClass('is-open').siblings().removeClass('is-open');
       }
     });
-
-
   });
 
   
