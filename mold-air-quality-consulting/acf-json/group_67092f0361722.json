@@ -1,0 +1,91 @@
+{
+    "key": "group_67092f0361722",
+    "title": "Pages: Payment Terms & Conditions",
+    "fields": [
+        {
+            "key": "field_67092f03cf167",
+            "label": "Payment Terms",
+            "name": "payment_terms",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Include any new payment terms to the list here",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Payment Term",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_670931f4cf168",
+                    "label": "Payment Term Title",
+                    "name": "payment_term_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_67092f03cf167"
+                },
+                {
+                    "key": "field_67093202cf169",
+                    "label": "Payment Term Description",
+                    "name": "payment_term_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_67092f03cf167"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "179"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1728655985
+}

@@ -1,0 +1,65 @@
+.c-payment-terms {
+    @include container-margins;
+    &__title {
+        color: $green;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 7.5rem;
+        @media only screen and (max-width: $tablet_max) {
+            margin-bottom: 4.5rem;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4.5rem;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.5s ease-out;
+        border-bottom: 1px solid rgba($light-grey, 0.4);
+        &.is-open {
+            grid-template-rows: 1fr;
+        }
+      }
+      &__list-item {
+        margin-bottom: 1.5rem;
+      }
+      &__list-item-title {
+        font-weight: 400;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        color: $navyBlue;
+        &:hover {
+            color: $green;
+        }
+        svg {
+            width: 25px;
+            height: 25px;
+            transition: 300ms;
+            path {
+                fill: $navyBlue;
+            }
+        }
+      }
+      &__list-item-desc {
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        color: $dark-grey;
+      }
+
+      &__list-item-active-title {
+        color: $green !important;
+        svg {
+            transform: rotate(90deg);
+            path {
+                fill: $green !important;
+            }
+        }
+      }
+}

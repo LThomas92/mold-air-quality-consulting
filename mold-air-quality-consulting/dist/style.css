@@ -270,11 +270,11 @@
       display: block;
       margin-bottom: 0.5rem;
       transition: all 300ms ease-in; }
+      .site-footer__navigation ul li a:hover {
+        color: #0F2944; }
       @media only screen and (max-width: 1024px) {
         .site-footer__navigation ul li a {
           font-size: 1.2rem; } }
-      .site-footer__navigation ul li a::hover {
-        color: #0F2944; }
   .site-footer__copyright {
     background-color: #000;
     padding: 0.5rem 1.4rem;
@@ -774,6 +774,66 @@
     margin: 3.5rem 0; }
     .c-privacy-policy__main-content h2 {
       margin: 1.2rem 0; }
+
+.c-payment-terms {
+  width: calc(100vw - calc(16px * 2));
+  max-width: 959px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+  @media (min-width: 1440px) {
+    .c-payment-terms {
+      max-width: 1200px; } }
+  @media (max-width: 767px) {
+    .c-payment-terms {
+      width: calc(100vw - calc(16px * 2)); } }
+  .c-payment-terms__title {
+    color: #5B9B45;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 7.5rem; }
+    @media only screen and (max-width: 1024px) {
+      .c-payment-terms__title {
+        margin-bottom: 4.5rem; } }
+  .c-payment-terms__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4.5rem; }
+  .c-payment-terms__wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.4); }
+    .c-payment-terms__wrapper.is-open {
+      grid-template-rows: 1fr; }
+  .c-payment-terms__list-item {
+    margin-bottom: 1.5rem; }
+  .c-payment-terms__list-item-title {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #0F2944; }
+    .c-payment-terms__list-item-title:hover {
+      color: #5B9B45; }
+    .c-payment-terms__list-item-title svg {
+      width: 25px;
+      height: 25px;
+      transition: 300ms; }
+      .c-payment-terms__list-item-title svg path {
+        fill: #0F2944; }
+  .c-payment-terms__list-item-desc {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    color: #949494; }
+  .c-payment-terms__list-item-active-title {
+    color: #5B9B45 !important; }
+    .c-payment-terms__list-item-active-title svg {
+      transform: rotate(90deg); }
+      .c-payment-terms__list-item-active-title svg path {
+        fill: #5B9B45 !important; }
 
 body {
   position: relative;

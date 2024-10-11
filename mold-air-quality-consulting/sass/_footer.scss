@@ -105,12 +105,12 @@
           display: block;
           margin-bottom: 0.5rem;
           transition: all 300ms ease-in;
+          &:hover {
+            color: $navyBlue;
+          }
           @media only screen and (max-width: $tablet_max) {
             font-size: 1.2rem;
         }
-          &::hover {
-            color: $navyBlue;
-          }
         }
       }
     }

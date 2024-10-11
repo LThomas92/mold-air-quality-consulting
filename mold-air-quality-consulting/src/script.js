@@ -91,6 +91,20 @@ $('.mobile-menu-overlay__close-icon').click(function() {
     });
   }
 
+  //Pages -- Pricing
+  $('.c-payment-terms__list-item-title').click(function() {
+    var paymentTitle = $(this).attr('key');
+    $(this).toggleClass('c-payment-terms__list-item-active-title').siblings().removeClass('c-payment-terms__list-item-active-title');
+
+    $('.c-payment-terms__wrapper').each(function() {
+      if($(this).attr('key') == paymentTitle) {
+        $(this).toggleClass('is-open').siblings().removeClass('is-open');
+      }
+    });
+
+
+  });
+
   
     
 });
