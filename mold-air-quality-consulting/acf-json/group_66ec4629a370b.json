@@ -29,10 +29,10 @@
         },
         {
             "key": "field_66edaa8747d56",
-            "label": "Schedule Button",
-            "name": "schedule_button",
+            "label": "Schedule Phone Number",
+            "name": "schedule_phone_number",
             "aria-label": "",
-            "type": "link",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -41,7 +41,11 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -62,5 +66,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1726851730
+    "modified": 1730990141
 }

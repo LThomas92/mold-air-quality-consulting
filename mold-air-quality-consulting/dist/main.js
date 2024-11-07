@@ -89,6 +89,11 @@ let blockTriggerHeight = $(window).height() * 0.33;
 
 $(document).ready(function () {
 
+  $('.menu-item-has-children').click(function () {
+    $('.sub-menu').toggleClass('sub-menu__active');
+    $(this).toggleClass('expanded');
+  });
+
   //Mobile Menu 
   $('.mobile-header__menu-icon').click(function () {
     $(this).toggleClass('open');

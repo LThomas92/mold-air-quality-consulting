@@ -30,7 +30,7 @@
 	<header id="masthead" class="site-header">
 		<?php 
 			$logo = get_field('logo', 'option');
-			$scheduleBtn = get_field('schedule_button', 'option');
+			$scheduleBtn = get_field('schedule_phone_number', 'option');
 		?>
 	
 		<div class="site-header__navigation">
@@ -47,7 +47,7 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
-		<a href="<?php echo $scheduleBtn['url']; ?>" class="site-header__schedule-btn"><?php echo $scheduleBtn['title']; ?></a>
+		<a href="tel:9255388064" class="site-header__schedule-btn"><?php echo $scheduleBtn; ?></a>
 		</div>
 	</header><!-- #masthead -->
 
@@ -89,7 +89,7 @@
 		?>
 	
 	</nav><!-- #site-navigation -->
-	<a href="<?php echo $scheduleBtn['url']; ?>" class="mobile-menu-overlay__schedule-appt"><?php echo $scheduleBtn['title']; ?></a>
+	<a href="tel:9255388064"" class="mobile-menu-overlay__schedule-appt"><?php echo $scheduleBtn; ?></a>
 	</div>
 </div>
 

@@ -25,7 +25,7 @@
     .site-header__logo:hover {
       transform: rotate(6deg); }
     .site-header__logo img {
-      height: 5rem; }
+      height: 8rem; }
   .site-header__navigation {
     display: flex;
     justify-content: space-between;
@@ -48,12 +48,85 @@
   .site-header__schedule-btn {
     background-color: #5B9B45;
     color: #fff;
-    padding: 0.8rem 1.2rem;
-    border-radius: 3px; }
+    padding: 0.8rem 2rem;
+    border-radius: 3px;
+    position: relative; }
+    .site-header__schedule-btn::before {
+      content: '';
+      background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDExMCAxMzUiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgICAgZmlsbC1ydWxlOiBldmVub2RkOwogICAgICAgIHN0cm9rZS13aWR0aDogMHB4OwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik01NC40LDMyYzIsMy41LjgsOC4xLTIuNywxMC4xLTEuMS42LTIuNywxLjItMi44LDIuNy0uMiw0LjcsMi4zLDExLDQuOSwxNS41LDIuNiw0LjUsNi44LDkuOSwxMSwxMiwxLjQuNywyLjYtLjQsMy44LTFoMGMzLjUtMiw4LjEtLjgsMTAuMSwyLjdsNy43LDEzLjNjMiwzLjUuOCw4LTIuNywxMC4xbC0xMS42LDYuN2MtMiwxLjItNC42LjktNi40LS42QzQ2LjEsODYuNCwyNy40LDU0LjEsMjIuMywyOC41Yy0uNS0yLjMuNi00LjcsMi42LTUuOGwxMS42LTYuN2gwYzMuNS0yLDguMS0uOCwxMC4xLDIuN2w3LjcsMTMuM2gwWk02OS45LDM0aDBjOSw1LjIsMTQuNSwxNC44LDE0LjYsMjUuMiwwLC45LjgsMS42LDEuNywxLjZzMS43LS43LDEuNy0xLjZjMC01LjctMS41LTExLjMtNC40LTE2LjItMi45LTQuOS03LTktMTEuOS0xMS45LS44LS41LTEuOC0uMi0yLjMuNi0uNS44LS4yLDEuOC42LDIuM2gwWk02Ni4zLDQwLjJjNi44LDMuOSwxMSwxMS4yLDExLDE5LjEsMCwuOS44LDEuNywxLjcsMS43czEuNy0uOCwxLjctMS43YzAtOS4xLTQuOC0xNy41LTEyLjctMjItLjgtLjQtMS44LS4yLTIuMy42LS41LjgtLjIsMS44LjYsMi4zaDBaTTYyLjgsNDYuM2M0LjYsMi43LDcuNSw3LjYsNy41LDEyLjksMCwuOS44LDEuNiwxLjcsMS42czEuNy0uNywxLjctMS42YzAtMy4yLS44LTYuNC0yLjUtOS4yLTEuNi0yLjgtMy45LTUuMS02LjctNi43LS40LS4yLS45LS4zLTEuMy0uMi0uNC4xLS44LjQtMSwuOC0uMi40LS4zLjktLjIsMS4zLjEuNC40LjguOCwxaDBaIi8+Cjwvc3ZnPg==);
+      background-position: center center;
+      background-size: 20px 20px;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      margin-left: 0.4rem;
+      margin-right: 0.5rem;
+      margin-top: 0.8rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block; }
 
 .main-navigation {
   display: flex;
   justify-content: center; }
+
+.menu-item-has-children > a {
+  position: relative;
+  padding-right: 1.8rem; }
+  .menu-item-has-children > a::after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #39A6E1;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    transition: 300ms;
+    vertical-align: middle; }
+
+.menu-item-has-children .sub-menu {
+  background-color: #39A6E1;
+  box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.15), 25px 0px 20px -20px rgba(0, 0, 0, 0.15), 0px 25px 20px -20px rgba(0, 0, 0, 0.15), -25px 0px 20px -20px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  max-height: 0;
+  /* Initially collapsed */
+  overflow: hidden;
+  /* Hide content while collapsing */
+  min-width: 160px;
+  z-index: 1;
+  transition: max-height 0.4s ease;
+  /* Smooth transition */
+  display: flex;
+  flex-direction: column; }
+  .menu-item-has-children .sub-menu__active {
+    max-height: 300px;
+    /* Max height larger than actual content height */ }
+  .menu-item-has-children .sub-menu li {
+    border-bottom: 1.2px solid #fff;
+    margin-right: 0;
+    display: inline-block;
+    padding: 0.6rem 1rem; }
+    .menu-item-has-children .sub-menu li:last-child {
+      border-bottom: none; }
+  .menu-item-has-children .sub-menu li a {
+    padding: 0.5rem 0;
+    color: #fff;
+    transition: all 300ms ease-in; }
+    @media only screen and (max-width: 1024px) {
+      .menu-item-has-children .sub-menu li a {
+        margin-bottom: 0; } }
+    .menu-item-has-children .sub-menu li a:hover {
+      color: #5B9B45; }
+
+.expanded > a::after {
+  transform: rotate(180deg);
+  top: 8px; }
 
 .mobile-header {
   display: none; }
