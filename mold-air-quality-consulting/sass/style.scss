@@ -8,12 +8,6 @@
 @import "pages/home";
 @import "pages/about";
 @import "pages/how-it-works";
-@import "pages/gallery";
-@import "pages/faqs";
-@import "pages/booking";
-@import "pages/contact";
-@import "pages/privacy-policy";
-@import "pages/payment-terms";
 
 body {
     position: relative;
@@ -26,7 +20,11 @@ body {
     padding: 0;
     box-sizing: border-box;
   }
-  
+
+  html {
+    scroll-behavior: smooth;
+  }
+    
   html,
   body {
     height: 100%;

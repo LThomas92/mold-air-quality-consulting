@@ -96,24 +96,7 @@
         color: $navyBlue;
       }
     }
-    //FOOTER NAVIGATION
-    &__navigation {
-      flex-basis: calc((100% / 3) - 4rem);
-      ul {
-        li a {
-          color: $white;
-          display: block;
-          margin-bottom: 0.5rem;
-          transition: all 300ms ease-in;
-          &:hover {
-            color: $navyBlue;
-          }
-          @media only screen and (max-width: $tablet_max) {
-            font-size: 1.2rem;
-        }
-        }
-      }
-    }
+
     &__copyright {
       background-color: $black;
       padding: 0.5rem 1.4rem;

@@ -88,31 +88,23 @@ let gutenbergScrollAnims = false;
 let blockTriggerHeight = $(window).height() * 0.33;
 
 $(document).ready(function () {
+  // Smooth scroll to the target section
+  $('a[href^="#"]').on('click', function (e) {
+    e.preventDefault(); // Prevent the default anchor click behavior (stopping jump to top)
 
-  $('.menu-item-has-children').click(function () {
-    $('.sub-menu').toggleClass('sub-menu__active');
-    $(this).toggleClass('expanded');
-  });
+    // Get the target section
+    var target = $(this.hash); // This will get the target section (e.g., #section1)
 
-  //Mobile Menu 
-  $('.mobile-header__menu-icon').click(function () {
-    $(this).toggleClass('open');
-    $('.mobile-menu-overlay').toggleClass('mobile-menu-overlay__active');
-  });
+    if (target.length) {
+      // Calculate the dynamic offset for the sticky navigation
+      var headerHeight = $('.site-header').outerHeight();
+      var targetOffset = target.offset().top;
 
-  $('.mobile-menu-overlay__close-icon').click(function () {
-    $('.mobile-menu-overlay').removeClass('mobile-menu-overlay__active');
-  });
-
-  $('.c-payment-terms__list-item-title').click(function () {
-    var paymentTitle = $(this).attr('key');
-    $(this).toggleClass('c-payment-terms__list-item-active-title').siblings().removeClass('c-payment-terms__list-item-active-title');
-
-    $('.c-payment-terms__wrapper').each(function () {
-      if ($(this).attr('key') == paymentTitle) {
-        $(this).toggleClass('is-open').siblings().removeClass('is-open');
-      }
-    });
+      // Scroll to the target section with a smooth effect
+      $('html, body').animate({
+        scrollTop: targetOffset - headerHeight // Account for sticky header height
+      }, 1000); // 1000ms for the smooth scroll duration
+    }
   });
 
   if (jQuery(".gutenberg-styles > *").length && !(window.location.hash != "" && jQuery(window.location.hash).length)) {
@@ -171,18 +163,6 @@ $(window).resize(() => {
       }
     });
   }
-
-  //Pages -- Pricing
-  $('.c-payment-terms__list-item-title').click(function () {
-    var paymentTitle = $(this).attr('key');
-    $(this).toggleClass('c-payment-terms__list-item-active-title').siblings().removeClass('c-payment-terms__list-item-active-title');
-
-    $('.c-payment-terms__wrapper').each(function () {
-      if ($(this).attr('key') == paymentTitle) {
-        $(this).toggleClass('is-open').siblings().removeClass('is-open');
-      }
-    });
-  });
 });
 
 /***/ })

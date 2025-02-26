@@ -50,16 +50,6 @@
         <a href="tel:<?php echo $contactPhone; ?>" class="site-footer__contact-phone"><?php echo $contactPhone; ?></a>
         <a href="mailto:<?php echo $contactEmail; ?>" class="site-footer__contact-email"><?php echo $contactEmail; ?></a>
 			</div>
-      <nav id="site-footer" class="site-footer__navigation">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-2',
-					'menu_id'        => 'footer-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
 		</div><!-- .site-info -->
     <div class="site-footer__copyright">
       <?php $copyright = get_field('copyright_text', 'option'); ?>

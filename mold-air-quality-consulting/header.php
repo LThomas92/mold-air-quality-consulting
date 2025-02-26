@@ -34,9 +34,11 @@
 		?>
 	
 		<div class="site-header__navigation">
-		<a class="site-header__logo" href="<?php echo site_url(); ?>">
-			<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">
+		<a class="site-header__link" href="<?php echo site_url(); ?>">
+			<img class="site-header__logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>"/>
+			<img class="site-header__mobile-logo" title="Mold & Air Quality Consulting Logo" class="mobile-menu-overlay__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Mold & Air Quality Consulting Logo"/>
 		</a>
+
 		<nav id="site-navigation" class="main-navigation">
 			<?php
 			wp_nav_menu(
@@ -47,49 +49,24 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
+		<div class="site-header__schedule-btn-container">
 		<a href="tel:9255388064" class="site-header__schedule-btn"><?php echo $scheduleBtn; ?></a>
+		</div>
+</div>
+
+<nav class="main-navigation__mobile">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+
 		</div>
 	</header><!-- #masthead -->
 
-	<div class="mobile-header">
-
-	<a href="<?php echo site_url(); ?>">
-<img title="Mold & Air Quality Consulting Logo" class="mobile-menu-overlay__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Mold & Air Quality Consulting Logo"/>
-</a>
-
-<div id="nav-icon3" class="mobile-header__menu-icon">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-
-
-</div>
-
-<div class="mobile-menu-overlay">
-<div class="mobile-menu-overlay__container">
-<div class="mobile-menu-overlay__header">
-
-<a href="<?php echo site_url(); ?>">
-<img title="Mold & Air Quality Consulting Logo" class="mobile-menu-overlay__logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Mold & Air Quality Consulting Logo"/>
-</a>
-
-<img class="mobile-menu-overlay__close-icon" src="<?php echo get_template_directory_uri(); ?>/img/close-white.svg" alt="Close Icon"/>
-
-</div>
-<nav class="mobile-navigation">
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			)
-		);
-		?>
-	
-	</nav><!-- #site-navigation -->
-	<a href="tel:9255388064"" class="mobile-menu-overlay__schedule-appt"><?php echo $scheduleBtn; ?></a>
-	</div>
-</div>
 
