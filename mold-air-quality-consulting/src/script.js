@@ -26,7 +26,6 @@ $('a[href^="#"]').on('click', function(e) {
   }
 });
 
-
     if ( jQuery(".gutenberg-styles > *").length &&
     !(window.location.hash != "" && jQuery(window.location.hash).length)
   ) {

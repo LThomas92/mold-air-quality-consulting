@@ -6,11 +6,13 @@
   ***************************/
 .site-header {
   padding: 1.5rem 0;
-  position: -webkit-sticky;
-  position: sticky;
+  position: -webkit-fixed;
+  position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: #fff; }
+  background-color: #fff;
+  box-shadow: 0px 0px 34px 1px rgba(0, 0, 0, 0.75);
+  width: 100%; }
   .site-header__logo {
     height: 8rem; }
     @media only screen and (max-width: 1024px) {
@@ -55,10 +57,11 @@
             font-size: 1.2rem; } }
         .site-header__navigation ul li a:hover {
           color: #5B9B45; }
-  .site-header__schedule-btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+  @media only screen and (max-width: 1024px) {
+    .site-header__schedule-btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
   .site-header__schedule-btn {
     background-color: #5B9B45;
     color: #fff;
@@ -114,6 +117,9 @@
       text-transform: uppercase;
       font-weight: 500;
       letter-spacing: 0.8px; } }
+
+.site {
+  margin-top: 10rem; }
 
 .site-footer {
   width: calc(100vw - calc(16px * 2));
@@ -521,7 +527,7 @@
     @media only screen and (max-width: 1024px) {
       .c-how-it-works__list-item {
         flex-direction: column;
-        padding: 0 2.5rem; } }
+        padding: 0 1.5rem; } }
   .c-how-it-works__list-item-content {
     flex-basis: calc((100% / 2) - 4rem); }
     @media only screen and (max-width: 1024px) {
